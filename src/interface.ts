@@ -1,5 +1,3 @@
-
-
 export interface Book {
     forEach(arg0: (book: any) => void): unknown
     id: number

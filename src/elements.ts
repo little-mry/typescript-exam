@@ -1,12 +1,22 @@
-let bookCovers: HTMLElement ;
+const getRequiredElement = <T extends HTMLElement>(selector: string): T => {
+    const element = document.querySelector(selector);
+    if (!element) {
+        throw new Error(`Element with selector "${selector}" not found`);
+    }
+    return element as T;
+};
 
-const bookSite: HTMLElement = document.querySelector('.book-site__container') as HTMLElement
-const mainStart: HTMLElement | null = document.querySelector('.main__start')
-const bookCover: HTMLElement = document.querySelector('.selected-book-cover') as HTMLElement
-const bookDescription: HTMLElement= document.querySelector('.book-description') as HTMLElement
-const audience: HTMLElement = document.querySelector('.audience') as HTMLElement
-const published: HTMLElement = document.querySelector('.published') as HTMLElement
-const pages: HTMLElement = document.querySelector('.pages') as HTMLElement
-const publisher: HTMLElement = document.querySelector('.publisher') as HTMLElement
-const backBtn: HTMLElement | null = document.querySelector('.btn-back')
-const bookList: HTMLElement | null = document.querySelector('.search-list')
+export const elements = {
+    mainStart: getRequiredElement<HTMLElement>('.main__start'),
+    bookSite: getRequiredElement<HTMLElement>('.book-site__container'),
+    bookCover: getRequiredElement<HTMLElement>('.selected-book-cover'),
+    bookDescription: getRequiredElement<HTMLElement>('.book-description'),
+    audience: getRequiredElement<HTMLElement>('.audience'),
+    published: getRequiredElement<HTMLElement>('.published'),
+    pages: getRequiredElement<HTMLElement>('.pages'),
+    publisher: getRequiredElement<HTMLElement>('.publisher'),
+    backBtn: getRequiredElement<HTMLButtonElement>('.btn-back'),
+    bookList: getRequiredElement<HTMLElement>('.search-list'),
+    searchDropdown: getRequiredElement<HTMLElement>('.search-dropdown'),
+    searchInput : getRequiredElement<HTMLInputElement>('#search') 
+};
