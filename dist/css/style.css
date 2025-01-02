@@ -22,7 +22,8 @@ body {
     gap: 1rem;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 100vw;
+    height: 100vh;
    
 }
 
@@ -70,7 +71,9 @@ body {
 .main__start {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 70%;
+    height: auto;
+    padding: 2rem;
     gap: 1.2rem;
     align-items: center;
     justify-content: center;
@@ -84,11 +87,13 @@ body {
     width: 16rem;
     height: 20rem;
     cursor: pointer;
+    border: .5px black solid;
     transition: scale .5s;
+
 }
 
-.book__container:hover {
-    scale: 1.1;
+.book-cover__container:hover {
+    scale: 1.05;
     box-shadow: 1px 1px 6px 3px rgba(30, 30, 30, 0.635);
 }
 

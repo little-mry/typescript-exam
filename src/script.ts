@@ -30,7 +30,7 @@ export const createBooks = async(validBooks: Book[]) => {
             <h3 class="book-author">${safeAuthor}</h3>
         </section>`
 
-        bookCovers.style.background = `${book.color}`
+        bookCovers.style.background = `linear-gradient(208.29deg, rgba(255, 255, 255, 0.35),${book.color}`
         if(elements.mainStart) elements.mainStart.appendChild(bookCovers)
         
         bookCovers.addEventListener('click', () => {
@@ -48,7 +48,7 @@ const showSelectedBook = (selectedBook: Book) => {
         elements.backBtn.dataset.listenerAdded = 'true'; 
     }
 
-    elements.bookCover.style.background = `${selectedBook.color}`
+    elements.bookCover.style.background = `linear-gradient(208.29deg, rgba(255, 255, 255, 0.5), ${selectedBook.color}`
     const safeTitle = sanitizeHTML(selectedBook.title);
     const safeAuthor = sanitizeHTML(selectedBook.author);
     const safePlot = sanitizeHTML(selectedBook.plot);

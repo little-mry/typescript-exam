@@ -31,7 +31,6 @@ export const createBookArray = () => __awaiter(void 0, void 0, void 0, function*
             throw new Error("API-data är inte en array!");
         }
         validBooks = books;
-        console.log('valid books: ', validBooks);
         createBooks(validBooks);
     }
     catch (error) {

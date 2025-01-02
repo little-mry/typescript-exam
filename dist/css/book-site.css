@@ -1,26 +1,11 @@
-
-
 .book-site__container {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    background: rgba(34, 34, 34, .7);
-}
-
-.selected-book__container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    border-radius: 1rem;
-    background: rgba(34, 34, 34, 1);
-    width: 80%;
-    height: 80%;
+    background: rgba(34, 34, 34, .8);
 }
 
 .btn__container {
@@ -37,12 +22,24 @@
     cursor: pointer;
 }
 
+.selected-book__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    background: rgba(34, 34, 34, 1);
+    width: 70%;
+    height: 70%;
+}
+
 .selected-book-cover {
     position: relative;
     display: flex;
-    width: 40%;
+    width: 35%;
     height: 80%;
-    background: linear-gradient(208.29deg, rgba(255, 255, 255, 0.5), rgba(235, 87, 87, 1))
 }
 
 .book-title--black, .book-author--black {
@@ -51,12 +48,17 @@
 
 .book-info__container {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: column;
+    flex-direction: column; 
     gap: 1rem;
     width: 40%;
     height: 80%;
+    justify-content: space-between;
+}
+
+.book-description {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 
@@ -66,7 +68,14 @@
     flex-wrap: wrap;
     width: 100%;
     background: rgba(196, 196, 196, 0.08);
+    row-gap: 1rem;
+    padding: .5rem;
+}
 
+.product {
+    display: flex;
+    gap: .5rem;
+    width: 50%;
 }
 
 
@@ -85,4 +94,32 @@
 
 
 
+@media (max-width: 480px) {
+    .selected-book__container {
+        width: 90%;
+        height: 95%;
+        overflow-y: auto;
+    }
+    
+    .selected-book-cover {
+        position: relative;
+        display: flex;
+        width: 80%;
+        height: 40%;
+    }
 
+    .book-info__container {
+        width: 100%;
+        height: auto;
+        gap: 1rem;
+        justify-content: flex-start;
+    }
+
+    .book-description {
+        gap: .5rem;
+    }
+
+    .product {
+        flex-direction: column;
+    }
+}
